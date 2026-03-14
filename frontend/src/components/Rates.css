@@ -1,0 +1,118 @@
+.rates-section {
+    background-color: var(--color-surface);
+}
+
+.rates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.rate-card {
+    background: var(--color-bg);
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.rate-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--color-border);
+    transition: all 0.4s ease;
+}
+
+.rate-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(176, 82, 245, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.rate-card:hover::before {
+    background: var(--color-accent);
+    box-shadow: 0 0 15px var(--color-accent);
+}
+
+.rate-icon {
+    color: var(--color-accent);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(176, 82, 245, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.rate-card:hover .rate-icon {
+    background: var(--color-accent);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.rate-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.rate-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
+    font-family: var(--font-primary);
+}
+
+.rate-desc {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.rate-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    transition: all var(--transition-fast);
+}
+
+.rate-card:hover .rate-btn {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .rate-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .rate-price {
+        font-size: 2rem;
+    }
+}

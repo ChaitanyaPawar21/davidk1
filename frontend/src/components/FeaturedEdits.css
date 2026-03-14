@@ -1,0 +1,94 @@
+.featured-section {
+    background-color: var(--color-bg);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-subtitle {
+    color: var(--color-text-secondary);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.edits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.edit-card {
+    cursor: pointer;
+}
+
+.edit-thumb-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    aspect-ratio: 9 / 16;
+    margin-bottom: 1.5rem;
+}
+
+.edit-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.edit-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all var(--transition-fast);
+}
+
+.play-btn {
+    transform: scale(0.8);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.edit-card:hover .edit-thumb {
+    transform: scale(1.05);
+}
+
+.edit-card:hover .edit-overlay {
+    opacity: 1;
+    background: rgba(176, 82, 245, 0.2);
+}
+
+.edit-card:hover .play-btn {
+    transform: scale(1);
+    color: var(--color-accent);
+}
+
+.edit-info {
+    padding: 0 0.5rem;
+}
+
+.edit-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color var(--transition-fast);
+}
+
+.edit-card:hover .edit-title {
+    color: var(--color-accent);
+}
+
+.edit-caption {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+}

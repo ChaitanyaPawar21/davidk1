@@ -1,0 +1,24 @@
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-large {
+    height: 120px;
+}
+
+.logo-medium {
+    height: 60px;
+}
+
+.logo-image {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    transition: transform var(--transition-fast);
+}
+
+.logo-container:hover .logo-image {
+    transform: scale(1.05);
+}
